@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Realtime MonkeyLearn</title>
+
+    <link href="css/lib/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <script src="js/lib/jquery-2.1.3.js"></script>
+    <script src="js/lib/d3.v3.min.js"></script>
+    <script src="js/lib/d3.layout.cloud.js"></script>
+    <script src="js/lib/bootstrap.js"></script>
+
+    <script src="js/monkeylearn.js"></script>
+
+    <script src="js/main.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <div class="logo"></div>
+            <div class="title">
+              MonkeyLearn: Realtime Demo
+            </div>
+          </a>
+        </div>
+        <div class="loading-circle"></div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+          <div class="col-md-4">
+            <textarea id="demo-text" class="form-control" placeholder="Enter your text here..."></textarea>
+          </div>
+          <div class="col-md-8">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>Tag Cloud</h4>
+                <hr>
+                <div id="demo-tagcloud"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>Keywords</h4>
+                <hr>
+                <div id="demo-keywords">
+                  <ul class="list-group">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>Sentiment</h4>
+                <hr>
+                <div id="demo-sentiment"></div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>Language</h4>
+                <hr>
+                <div id="demo-language"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>Entities</h4>
+                <hr>
+                <div id="demo-entities">
+                  <ul class="list-group">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <h2 class="raw-responses-title">Raw responses</h2>
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4 class="endpoint-title">Sentiment API Call</h4>
+                <span class="endpoint-url">
+                  https://api.monkeylearn.com/v2/classifiers/cl_rZ2P7hbs/classify/?
+                </span>
+                <hr>
+                <pre id="response-sentiment" class="response"></pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4 class="endpoint-title">Language Detection API Call</h4>
+                <span class="endpoint-url">
+                  https://api.monkeylearn.com/v2/classifiers/cl_hDDngsX8/classify/?
+                </span>
+                <hr>
+                <pre id="response-language" class="response"></pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4 class="endpoint-title">Keyword Extraction API Call</h4>
+                <span class="endpoint-url">
+                  https://api.monkeylearn.com/v2/extractors/ex_y7BPYzNG/extract/
+                </span>
+                <hr>
+                <pre id="response-keywords" class="response"></pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4 class="endpoint-title">Entity Extraction API Call</h4>
+                <span class="endpoint-url">
+                  https://api.monkeylearn.com/v2/extractors/ex_isnnZRbS/extract/
+                </span>
+                <hr>
+                <pre id="response-entities" class="response"></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </body>
+
+</html>

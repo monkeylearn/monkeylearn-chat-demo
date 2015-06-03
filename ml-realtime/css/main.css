@@ -1,0 +1,168 @@
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('/fonts/OpenSans-Regular.ttf');
+}
+
+body {
+    background-color: #F8F8F8;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.panel-body > hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.form-control {
+    border-color: #DDD;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+#demo-category {
+    padding-left: 0px;
+    margin-left: 25px;
+    border-left: 1px solid #DDD;
+    float: left;
+}
+
+#demo-language {
+    padding-left: 0px;
+    margin-left: 25px;
+    border-left: 1px solid #DDD;
+    float: left;
+}
+
+.category-node {
+    background-image: linear-gradient(to bottom, #FFF 0%, #F5F5F5 100%);
+    position: relative;
+    left: -25px;
+    float: left;
+    clear: left;
+}
+
+.category-node ~ .category-node {
+    margin-top: 10px
+}
+
+.entity-node > .label {
+    float: left;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+#demo-entities > .list-group {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.loading-circle {
+    border-radius: 50%;
+    background-color: #E44242;
+
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+
+    position: relative;
+    top: 20px;
+    float: right;
+
+    visibility: hidden;
+}
+
+.top-header {
+    padding: 10px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+div.logo {
+    background: url("/imgs/logo.png") repeat scroll 0% 0% / contain transparent;
+    position: relative;
+    top: -10px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.navbar-brand > .title {
+    position: relative;
+    top: -20px;
+    left: 15px;
+    display: inline-block;
+
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.raw-responses-title {
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background-color: #001E29;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    border-radius: 0px;
+}
+
+.endpoint-title {
+    display: inline-block;
+}
+
+.endpoint-url {
+    font-size: 0.9em;
+    color: #737373;
+}
+
+.endpoint-url:before {
+    content: "—";
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.response {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#demo-keywords {
+    margin-left: 10px;
+}
+
+#demo-text {
+    width: 100%;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+
+    height: 27em;
+}
+
+
+/* Syntax highlighting. */
+
+.response .string {
+    color: #008800;
+}
+
+.response .key {
+    color: #000088;
+}
+
+.response .boolean {
+    color: #006666;
+}
+
+.response .null {
+    color: #006666;
+}
+
+.response .number {
+    color: #006666;
+}
